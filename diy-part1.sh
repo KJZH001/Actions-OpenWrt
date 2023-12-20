@@ -20,3 +20,6 @@
 # Add Argon Theme
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+
+# Add Hello World
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
