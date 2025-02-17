@@ -23,7 +23,13 @@ echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git" >> feed
 # Argon Theme
 #echo "src-git argon https://github.com/jerrykuku/luci-theme-argon.git" >> feeds.conf.default
 #echo "src-git argon_config https://github.com/jerrykuku/luci-app-argon-config.git" >> feeds.conf.default
+echo "Now dir is"
+pwd
 cd package
+echo "Now dir is"
+pwd
 git clone https://github.com/jerrykuku/luci-theme-argon.git
 git clone https://github.com/jerrykuku/luci-app-argon-config.git
 cd ../
+echo "Now dir is"
+pwd
