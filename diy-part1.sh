@@ -19,3 +19,7 @@
 
 # Mihomo
 echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git" >> feeds.conf.default
+
+# Argon Theme
+echo "src-git argon https://github.com/jerrykuku/luci-theme-argon.git" >> feeds.conf.default
+echo "src-git argon-config https://github.com/jerrykuku/luci-app-argon-config.git" >> feeds.conf.default
