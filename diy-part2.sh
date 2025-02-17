@@ -22,12 +22,12 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i 's/OpenWrt/MoeWRT/g' package/base-files/files/bin/config_generate
 
 # 修改 LAN 接口的静态 IP 配置
-sed -i 's/option ipaddr '\"'192.168.1.1'\"'/option ipaddr '\"'192.168.1.1'\"'/g' package/base-files/files/etc/config/network
+#sed -i 's/option ipaddr '\"'192.168.1.1'\"'/option ipaddr '\"'192.168.1.1'\"'/g' package/base-files/files/etc/config/network
 # 修改 LAN 接口的子网掩码
-sed -i 's/option netmask '\"'255.255.255.0'\"'/option netmask '\"'255.255.0.0'\"'/g' package/base-files/files/etc/config/network
+#sed -i 's/option netmask '\"'255.255.255.0'\"'/option netmask '\"'255.255.0.0'\"'/g' package/base-files/files/etc/config/network
 # 修改主网关
-sed -i 's/option gateway '\"'192.168.1.1'\"'/option gateway '\"'192.168.12.1'\"'/g' package/base-files/files/etc/config/network
+#sed -i 's/option gateway '\"'192.168.1.1'\"'/option gateway '\"'192.168.12.1'\"'/g' package/base-files/files/etc/config/network
 # 设置 DNS
-sed -i 's/option dns '\"'8.8.8.8'\"'/option dns '\"'223.5.5.5'\"'/g' package/base-files/files/etc/config/network
+#sed -i 's/option dns '\"'8.8.8.8'\"'/option dns '\"'223.5.5.5'\"'/g' package/base-files/files/etc/config/network
 # 设置静态 IP
-sed -i 's/option proto '\"'dhcp'\"'/option proto '\"'static'\"'/g' package/base-files/files/etc/config/network
+#sed -i 's/option proto '\"'dhcp'\"'/option proto '\"'static'\"'/g' package/base-files/files/etc/config/network
