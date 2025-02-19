@@ -17,12 +17,11 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# Mihomo
-echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git" >> feeds.conf.default
+# Mihomo (已经写到源码了，所以注释掉)
+#echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git" >> feeds.conf.default
 
-# Argon Theme
-#echo "src-git argon https://github.com/jerrykuku/luci-theme-argon.git" >> feeds.conf.default
-#echo "src-git argon_config https://github.com/jerrykuku/luci-app-argon-config.git" >> feeds.conf.default
+# Argon Theme （不能加到feeds里）
+echo "Start Argon Theme"
 echo "Now dir is"
 pwd
 cd package
