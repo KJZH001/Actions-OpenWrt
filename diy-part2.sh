@@ -17,9 +17,9 @@
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
-# Modify hostname
+# Modify hostname （已经在files里定义）
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
-sed -i 's/OpenWrt/MoeWRT/g' package/base-files/files/bin/config_generate
+#sed -i 's/OpenWrt/MoeWRT/g' package/base-files/files/bin/config_generate
 
 # 修改 LAN 接口的静态 IP 配置
 #sed -i 's/option ipaddr '\"'192.168.1.1'\"'/option ipaddr '\"'192.168.1.1'\"'/g' package/base-files/files/etc/config/network
