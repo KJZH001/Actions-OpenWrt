@@ -1,0 +1,33 @@
+
+config system
+	option hostname 'MoeWrt'
+	option timezone 'CST-8'
+	option ttylogin '1'
+	option log_size '128'
+	option urandom_seed '0'
+	option zonename 'Asia/Shanghai'
+	option conloglevel '4'
+	option cronloglevel '8'
+	option zram_comp_algo 'zstd'
+	option zram_size_mb '328'
+
+config timeserver 'ntp'
+	option enabled '1'
+	option enable_server '0'
+	list server 'ntp.aliyun.com'
+	list server '0.openwrt.pool.ntp.org'
+
+config led 'led_wan'
+	option name 'WAN'
+	option sysfs 'green:wan'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'eth0'
+
+config led 'led_lan'
+	option name 'LAN'
+	option sysfs 'green:lan'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'eth1'
+
