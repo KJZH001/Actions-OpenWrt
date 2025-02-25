@@ -1,43 +1,47 @@
+# 本配置交换了WAN口和LAN口的位置
+# 原始的配置在network.bak中
 
 config interface 'loopback'
-	option device 'lo'
-	option proto 'static'
-	option ipaddr '127.0.0.1'
-	option netmask '255.0.0.0'
+    option device 'lo'
+    option proto 'static'
+    option ipaddr '127.0.0.1'
+    option netmask '255.0.0.0'
 
 config globals 'globals'
-	option packet_steering '1'
+    option packet_steering '1'
+
+# 更新 br-lan 的设备，将 eth0 替换为 eth1
+config device
+    option name 'br-lan'
+    option type 'bridge'
+    list ports 'eth0'  # eth0 现在作为 LAN 口
+    option promisc '1'
 
 config device
-	option name 'br-lan'
-	option type 'bridge'
-	list ports 'eth1'
-	option promisc '1'
+    option name 'eth0'
 
-config device
-	option name 'eth1'
-
+# 更新 LAN 配置，eth0 作为 LAN
 config interface 'lan'
-	option device 'br-lan'
-	option proto 'static'
-	option ipaddr '192.168.1.1'
-	option netmask '255.255.0.0'
-	option ip6assign '60'
-	option gateway '192.168.12.1'
-	option dns '223.5.5.5'
-	option delegate '0'
+    option device 'br-lan'
+    option proto 'static'
+    option ipaddr '192.168.1.1'
+    option netmask '255.255.0.0'
+    option ip6assign '60'
+    option gateway '192.168.12.1'
+    option dns '223.5.5.5'
+    option delegate '0'
 
+# 更新 WAN 配置，eth1 作为 WAN
 config device
-	option name 'eth0'
+    option name 'eth1'
 
 config interface 'wan'
-	option device 'eth0'
-	option proto 'none'
-	option peerdns '0'
-	option ipv6 '0'
-	option delegate '0'
+    option device 'eth1'  # eth1 现在作为 WAN 口
+    option proto 'none'
+    option peerdns '0'
+    option ipv6 '0'
+    option delegate '0'
 
 config interface 'wan6'
-	option device 'eth0'
-	option proto 'dhcpv6'
-
+    option device 'eth1'  # eth1 也作为 WAN6
+    option proto 'dhcpv6'
